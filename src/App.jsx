@@ -7,6 +7,8 @@ import CoffeeCard from './components/CoffeeCard';
 function App() {
   const loadedCoffees = useLoaderData() || [];
   const [coffees, setCoffees] = useState(loadedCoffees);
+  console.log("Loaded Coffees:", loadedCoffees);
+
 
   return (
     <div className='my-20 '>
@@ -16,6 +18,7 @@ function App() {
 
       <div className='w-4/5 mx-auto my-12 grid md:grid-cols-2 gap-4'>
         {
+          Array.isArray(coffees) &&
           coffees.map(coffee => <CoffeeCard
             key={coffee._id}
             coffee={coffee}

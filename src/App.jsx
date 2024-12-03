@@ -14,7 +14,7 @@ function App() {
     <div className='my-20 '>
       <NavLink to='/addCoffee' className={'btn btn-primary'}>Add Coffee</NavLink>
 
-      <h1 className='text-6xl text-center text-purple-600'>Coffees: {loadedCoffees.length}</h1>
+      <h1 className='text-6xl text-center text-purple-600'>Coffees: {coffees.length}</h1>
 
       <div className='w-4/5 mx-auto my-12 grid md:grid-cols-2 gap-4'>
         {

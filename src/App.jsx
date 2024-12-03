@@ -5,7 +5,7 @@ import { NavLink, useLoaderData } from 'react-router-dom'
 import CoffeeCard from './components/CoffeeCard';
 
 function App() {
-  const loadedCoffees = useLoaderData();
+  const loadedCoffees = useLoaderData() || [];
   const [coffees, setCoffees] = useState(loadedCoffees);
 
   return (
